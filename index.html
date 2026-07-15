@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0E1525"/><g fill="none" stroke="#11C39A" stroke-width="2.4"><path d="M30 30h10v10"/><path d="M70 30h-10v10"/><path d="M30 70h10v-10"/><path d="M70 70h-10v-10"/></g><text x="50" y="57" font-family="monospace" font-size="20" font-weight="700" fill="#F6F7F9" text-anchor="middle">HB</text></svg></template>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hasan Bakır — Computer Vision &amp; AI Engineer</title>
+<meta name="description" content="Hasan Bakır — Computer Vision &amp; AI Engineer. Real-time detection, tracking, and edge deployment. IEEE-published, NASA Space Apps Global Nominee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{ margin:0; background:#F6F7F9; color:#0E1525; font-family:'Inter',system-ui,sans-serif; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+  a{ color:#22306E; text-decoration:none; }
+  a:hover{ color:#11C39A; }
+  ::selection{ background:#11C39A; color:#04241c; }
+  image-slot{ --isl-bg:#EEF1F5; }
+  @keyframes hudIn{ from{opacity:0; transform:scale(1.05)} to{opacity:1; transform:scale(1)} }
+  @keyframes scanY{ 0%{ transform:translateY(0); opacity:0 } 12%{opacity:.9} 88%{opacity:.9} 100%{ transform:translateY(var(--scan,320px)); opacity:0 } }
+  @keyframes brk{ from{opacity:0} to{opacity:1} }
+  @keyframes flowPulse{ 0%{ left:-10%; opacity:0 } 12%{opacity:1} 88%{opacity:1} 100%{ left:110%; opacity:0 } }
+  @keyframes stageBlink{ 0%,100%{ box-shadow:0 0 0 0 rgba(17,195,154,0) } 50%{ box-shadow:0 0 0 4px rgba(17,195,154,0.18) } }
+  @media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } html{ scroll-behavior:auto; } }
+</style>
+</helmet>
+
+<div style="max-width:1180px; margin:0 auto;">
+
+<!-- ============ NAV ============ -->
+<nav style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:14px clamp(18px,4vw,40px); background:rgba(246,247,249,0.82); backdrop-filter:blur(12px); border-bottom:1px solid #E4E7EC;">
+  <a href="#top" data-nav="top" style="display:flex; align-items:center; gap:10px; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16px; color:#0E1525;">
+    <span style="display:inline-block; width:9px; height:9px; background:#11C39A; box-shadow:0 0 0 3px rgba(17,195,154,0.22);"></span>
+    Hasan Bakır
+  </a>
+  <div style="display:flex; align-items:center; gap:clamp(10px,2vw,26px); font-family:'JetBrains Mono',monospace; font-size:12.5px; letter-spacing:0.02em; overflow-x:auto;">
+    <a href="#about" data-nav="about" style="color:#6B7488; padding:4px 0; border-bottom:2px solid transparent; white-space:nowrap;">About</a>
+    <a href="#roadmap" data-nav="roadmap" style="color:#6B7488; padding:4px 0; border-bottom:2px solid transparent; white-space:nowrap;">Roadmap</a>
+    <a href="#projects" data-nav="projects" style="color:#6B7488; padding:4px 0; border-bottom:2px solid transparent; white-space:nowrap;">Projects</a>
+    <a href="#papers" data-nav="papers" style="color:#6B7488; padding:4px 0; border-bottom:2px solid transparent; white-space:nowrap;">Papers</a>
+    <a href="#gallery" data-nav="gallery" style="color:#6B7488; padding:4px 0; border-bottom:2px solid transparent; white-space:nowrap;">Gallery</a>
+    <a href="#skills" data-nav="skills" style="color:#6B7488; padding:4px 0; border-bottom:2px solid transparent; white-space:nowrap;">Skills</a>
+    <a href="#contact" data-nav="contact" style="color:#6B7488; padding:4px 0; border-bottom:2px solid transparent; white-space:nowrap;">Contact</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="top" style="scroll-margin-top:72px; padding:clamp(36px,7vw,88px) clamp(18px,4vw,40px) clamp(30px,5vw,60px); display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:clamp(28px,5vw,60px); align-items:center; background-image:radial-gradient(#DDE1E8 1px, transparent 1px); background-size:22px 22px;">
+  <div>
+    <div style="display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#11C39A; border:1px solid #B7E9DC; background:#EAFBF5; padding:5px 10px; border-radius:4px; margin-bottom:22px;">
+      <span style="width:6px; height:6px; border-radius:50%; background:#11C39A;"></span>
+      Computer Vision &amp; AI Engineer · Edge Deployment
+    </div>
+    <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(38px,7vw,68px); line-height:1.02; letter-spacing:-0.02em; margin:0 0 20px;">Hasan Bakır</h1>
+    <p style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:clamp(18px,2.4vw,25px); line-height:1.3; color:#22306E; margin:0 0 22px; max-width:30ch; text-wrap:balance;">{{ thesisText }}</p>
+    <p style="font-family:'JetBrains Mono',monospace; font-size:12.5px; line-height:1.7; color:#6B7488; margin:0 0 30px;">15+ months of production CV in industry<br>IEEE-published · NASA Space Apps Global Nominee</p>
+    <div style="display:flex; flex-wrap:wrap; align-items:center; gap:12px;">
+      <a href="#roadmap" style="display:inline-flex; align-items:center; gap:8px; background:#11C39A; color:#04241c; font-family:'JetBrains Mono',monospace; font-weight:600; font-size:13px; padding:12px 20px; border-radius:6px;" style-hover="background:#0FB18C; transform:translateY(-2px)">View work →</a>
+      <a href="media/HasanBakir_CV.pdf" onClick="{{ downloadCV }}" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; background:#fff; color:#0E1525; font-family:'JetBrains Mono',monospace; font-weight:600; font-size:13px; padding:12px 20px; border-radius:6px; border:1px solid #D8DCE4;" style-hover="border-color:#11C39A; color:#11C39A">Resume</a>
+      <a href="https://github.com/hasan-bakr" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:6px; border:1px solid #D8DCE4; background:#fff; color:#22306E; font-family:'JetBrains Mono',monospace; font-weight:600; font-size:12px;" style-hover="border-color:#11C39A; color:#11C39A">GH</a>
+      <a href="https://linkedin.com/in/hasan-bakir" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:6px; border:1px solid #D8DCE4; background:#fff; color:#22306E; font-family:'JetBrains Mono',monospace; font-weight:600; font-size:12px;" style-hover="border-color:#11C39A; color:#11C39A">in</a>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6B7488; margin-left:2px;">Istanbul, Turkey</span>
+    </div>
+  </div>
+
+  <!-- detection-box photo -->
+  <div style="justify-self:center;">
+    <div data-hud-frame="" style="position:relative; width:min(340px,78vw); aspect-ratio:4/5; animation:hudIn .8s cubic-bezier(.2,.8,.2,1) both;">
+      <div style="position:absolute; top:-30px; left:0; display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; color:#04241c; background:#11C39A; padding:4px 9px; border-radius:3px 3px 0 0;">
+        hasan_bakır · conf <span data-conf="">0.99</span>
+      </div>
+      <div style="position:absolute; inset:0; overflow:hidden; background:#EEF1F5; border:1px solid #D8DCE4;">
+        <image-slot id="hb_profile" shape="rect" fit="cover" placeholder="Drop profile photo" style="width:100%; height:100%;"></image-slot>
+        <div data-scan="" style="position:absolute; left:0; right:0; top:0; height:2px; background:linear-gradient(90deg,transparent,#11C39A,transparent); box-shadow:0 0 12px 2px rgba(17,195,154,0.5); animation:scanY 2.6s cubic-bezier(.5,0,.5,1) 0.4s both;"></div>
+      </div>
+      <!-- corner brackets -->
+      <span style="position:absolute; top:-4px; left:-4px; width:22px; height:22px; border-top:2px solid #11C39A; border-left:2px solid #11C39A;"></span>
+      <span style="position:absolute; top:-4px; right:-4px; width:22px; height:22px; border-top:2px solid #11C39A; border-right:2px solid #11C39A;"></span>
+      <span style="position:absolute; bottom:-4px; left:-4px; width:22px; height:22px; border-bottom:2px solid #11C39A; border-left:2px solid #11C39A;"></span>
+      <span style="position:absolute; bottom:-4px; right:-4px; width:22px; height:22px; border-bottom:2px solid #11C39A; border-right:2px solid #11C39A;"></span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" data-reveal="" style="scroll-margin-top:72px; padding:clamp(40px,6vw,80px) clamp(18px,4vw,40px);">
+  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#11C39A; display:flex; align-items:center; gap:8px; margin-bottom:18px;">
+    <span style="display:inline-block; width:14px; height:10px; border-left:2px solid #11C39A; border-top:2px solid #11C39A;"></span>
+    section: about · id: 001
+  </div>
+  <p style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:clamp(19px,2.6vw,28px); line-height:1.45; letter-spacing:-0.01em; margin:0 0 30px; max-width:60ch; color:#0E1525; text-wrap:pretty;">
+    Computer Vision &amp; AI Engineer with 15+ months of production-level experience building end-to-end deep-learning systems in industrial environments. I work across object detection, multi-object tracking, segmentation, anomaly detection, and LLM/RAG pipelines — from architectural design to <span style="color:#22306E;">TensorRT-optimized deployment</span>. IEEE-published researcher and NASA Space Apps Global Nominee.
+  </p>
+  <div style="display:flex; flex-wrap:wrap; gap:10px;">
+    <span style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#0E1525; background:#fff; border:1px solid #B7E9DC; border-left:3px solid #11C39A; padding:8px 12px; border-radius:4px;">15+ mo production</span>
+    <span style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#0E1525; background:#fff; border:1px solid #B7E9DC; border-left:3px solid #11C39A; padding:8px 12px; border-radius:4px;">30–45 FPS real-time</span>
+    <span style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#0E1525; background:#fff; border:1px solid #B7E9DC; border-left:3px solid #11C39A; padding:8px 12px; border-radius:4px;">IEEE 2024</span>
+    <span style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#0E1525; background:#fff; border:1px solid #B7E9DC; border-left:3px solid #11C39A; padding:8px 12px; border-radius:4px;">NASA Top 10%</span>
+    <span style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#0E1525; background:#fff; border:1px solid #B7E9DC; border-left:3px solid #11C39A; padding:8px 12px; border-radius:4px;">2× TEKNOFEST</span>
+  </div>
+</section>
+
+<!-- ============ ROADMAP (FLAGSHIP) ============ -->
+<section id="roadmap" data-reveal="" style="scroll-margin-top:72px; padding:clamp(40px,6vw,72px) clamp(18px,4vw,40px);">
+  <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom:14px;">
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#11C39A; display:flex; align-items:center; gap:8px; margin-bottom:14px;">
+        <span style="display:inline-block; width:14px; height:10px; border-left:2px solid #11C39A; border-top:2px solid #11C39A;"></span>
+        section: roadmap · id: 002 · timeline
+      </div>
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(30px,4.4vw,46px); letter-spacing:-0.02em; margin:0;">Career timeline</h2>
+      <p style="font-family:'Inter',sans-serif; color:#6B7488; font-size:15px; margin:10px 0 0; max-width:52ch;">Milestones across education, competition, and industry — each shown as a stage on the timeline.</p>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:8px 14px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#6B7488;">
+      <span style="display:inline-flex; align-items:center; gap:6px;"><i style="width:9px; height:9px; border-radius:50%; background:#7C6CF5; display:inline-block;"></i>education</span>
+      <span style="display:inline-flex; align-items:center; gap:6px;"><i style="width:9px; height:9px; border-radius:50%; background:#F5A524; display:inline-block;"></i>competition</span>
+      <span style="display:inline-flex; align-items:center; gap:6px;"><i style="width:9px; height:9px; border-radius:50%; background:#2E5BFF; display:inline-block;"></i>experience</span>
+    </div>
+  </div>
+
+  <div data-roadmap="" style="position:relative; margin-top:18px;">
+    <div data-rm-spine="" style="position:absolute; top:8px; bottom:8px; left:50%; width:0; border-left:2px dashed #C6CCD8; z-index:0;"></div>
+    <div data-rm-rows="" style="position:relative; z-index:1; display:flex; flex-direction:column; gap:14px;"></div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" data-reveal="" style="scroll-margin-top:72px; padding:clamp(40px,6vw,72px) clamp(18px,4vw,40px);">
+  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#11C39A; display:flex; align-items:center; gap:8px; margin-bottom:14px;">
+    <span style="display:inline-block; width:14px; height:10px; border-left:2px solid #11C39A; border-top:2px solid #11C39A;"></span>
+    section: projects · id: 003
+  </div>
+  <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(30px,4.4vw,46px); letter-spacing:-0.02em; margin:0 0 28px;">Selected work</h2>
+
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px;">
+    <!-- project 1 -->
+    <article style="background:#fff; border:1px solid #E1E4EA; border-radius:10px; overflow:hidden; display:flex; flex-direction:column; transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;" style-hover="transform:translateY(-4px); border-color:#11C39A; box-shadow:0 20px 40px -22px rgba(14,21,37,0.45)">
+      <div style="position:relative; aspect-ratio:16/10; background:#EEF1F5;">
+        <div data-dual-video style="position:absolute; inset:0; overflow:hidden; background:#0E1525;">
+          <video data-main src="media/tracking.mp4" autoplay loop muted playsinline style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></video>
+          <div style="position:absolute; bottom:8px; left:50%; transform:translateX(-50%); width:34%; aspect-ratio:16/9; border:1.5px solid #11C39A; border-radius:4px; overflow:hidden; box-shadow:0 6px 18px -6px rgba(0,0,0,0.6); background:#0E1525;">
+            <video data-tactical src="media/tactical.mp4" autoplay loop muted playsinline style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></video>
+            <span style="position:absolute; top:3px; left:4px; font-family:'JetBrains Mono',monospace; font-size:9px; color:#04241c; background:#11C39A; padding:1px 5px; border-radius:2px; pointer-events:none;">BEV · tactical</span>
+          </div>
+        </div>
+        <span style="position:absolute; top:8px; right:8px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#fff; background:rgba(14,21,37,0.72); padding:3px 8px; border-radius:4px; pointer-events:none;">2026 · Open-source</span>
+      </div>
+      <div style="padding:20px; display:flex; flex-direction:column; gap:12px; flex:1;">
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:20px; margin:0;">Basketball Game Tracker Pipeline</h3>
+        <p style="font-family:'Inter',sans-serif; font-size:14px; line-height:1.55; color:#3A4257; margin:0;">Multi-modal sports analytics: player detection, persistent tracking, jersey-number OCR, pose estimation, instance segmentation, and bird's-eye-view homography — accelerated with ONNX/TensorRT for real-time inference.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:6px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">RF-DETR</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">ByteTrack</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">PARSeq</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">YOLO-Pose</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">SAM+Cutie</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">TensorRT</span>
+        </div>
+        <a href="https://github.com/hasan-bakr" target="_blank" rel="noopener" style="margin-top:auto; align-self:flex-start; font-family:'JetBrains Mono',monospace; font-weight:600; font-size:12.5px; color:#11C39A; border:1px solid #B7E9DC; padding:8px 14px; border-radius:6px;" style-hover="background:#EAFBF5">GitHub →</a>
+      </div>
+    </article>
+
+    <!-- project 2 -->
+    <article style="background:#fff; border:1px solid #E1E4EA; border-radius:10px; overflow:hidden; display:flex; flex-direction:column; transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;" style-hover="transform:translateY(-4px); border-color:#11C39A; box-shadow:0 20px 40px -22px rgba(14,21,37,0.45)">
+      <div data-wm="" style="position:relative; aspect-ratio:16/10; background:#fff; overflow:hidden;">
+        <div data-wm-track="" style="display:flex; height:100%; width:200%; transition:transform .45s cubic-bezier(.2,.8,.2,1);">
+          <!-- Slide 1: bottle + phone-in-hand, side by side -->
+          <div style="width:50%; height:100%; display:grid; grid-template-columns:1fr 1fr; gap:2px; padding:5px; box-sizing:border-box; background:#fff;">
+            <div style="position:relative; background:#fff;">
+              <img src="media/watermate-bottle.png" alt="WaterMate smart bottle" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain;" />
+              <span style="position:absolute; bottom:4px; left:4px; font-family:'JetBrains Mono',monospace; font-size:9px; color:#04241c; background:#11C39A; padding:1px 6px; border-radius:3px;">Matara</span>
+            </div>
+            <div style="position:relative; background:#fff;">
+              <img src="media/watermate-chat.png" alt="Hydra AI hydration chatbot in use" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain;" />
+              <span style="position:absolute; bottom:4px; left:4px; font-family:'JetBrains Mono',monospace; font-size:9px; color:#04241c; background:#11C39A; padding:1px 6px; border-radius:3px;">Hydra AI</span>
+            </div>
+          </div>
+          <!-- Slide 2: electronics + app screens, stacked -->
+          <div style="width:50%; height:100%; display:grid; grid-template-rows:1fr 1fr; gap:2px; padding:5px; box-sizing:border-box; background:#fff;">
+            <div style="position:relative; background:#fff;">
+              <img src="media/watermate-electronics.png" alt="ESP32 electronics in bottle base" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain;" />
+              <span style="position:absolute; bottom:4px; left:4px; font-family:'JetBrains Mono',monospace; font-size:9px; color:#04241c; background:#11C39A; padding:1px 6px; border-radius:3px;">ESP32 electronics</span>
+            </div>
+            <div style="position:relative; background:#fff;">
+              <img src="media/watermate-app.png" alt="WaterMate app — login, dashboard, Hydra AI chat" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain;" />
+              <span style="position:absolute; bottom:4px; left:4px; font-family:'JetBrains Mono',monospace; font-size:9px; color:#04241c; background:#11C39A; padding:1px 6px; border-radius:3px;">Flutter app</span>
+            </div>
+          </div>
+        </div>
+        <button data-wm-prev="" aria-label="Previous" style="position:absolute; top:50%; left:8px; transform:translateY(-50%); z-index:3; width:30px; height:30px; border-radius:50%; border:1px solid #E1E4EA; background:rgba(255,255,255,0.92); color:#0E1525; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:13px; display:flex; align-items:center; justify-content:center;" style-hover="border-color:#11C39A; color:#11C39A">◂</button>
+        <button data-wm-next="" aria-label="Next" style="position:absolute; top:50%; right:8px; transform:translateY(-50%); z-index:3; width:30px; height:30px; border-radius:50%; border:1px solid #E1E4EA; background:rgba(255,255,255,0.92); color:#0E1525; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:13px; display:flex; align-items:center; justify-content:center;" style-hover="border-color:#11C39A; color:#11C39A">▸</button>
+        <div data-wm-dots="" style="position:absolute; bottom:8px; left:50%; transform:translateX(-50%); z-index:3; display:flex; gap:6px;">
+          <button data-wm-dot="0" aria-label="Slide 1" style="width:8px; height:8px; padding:0; border-radius:50%; border:none; cursor:pointer; background:#11C39A;"></button>
+          <button data-wm-dot="1" aria-label="Slide 2" style="width:8px; height:8px; padding:0; border-radius:50%; border:none; cursor:pointer; background:#C6CCD8;"></button>
+        </div>
+        <span style="position:absolute; top:8px; right:8px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#fff; background:rgba(14,21,37,0.82); padding:3px 8px; border-radius:4px; pointer-events:none; z-index:3;">2024–2026 · TÜBİTAK 2209-A</span>
+      </div>
+      <div style="padding:20px; display:flex; flex-direction:column; gap:12px; flex:1;">
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:20px; margin:0;">WaterMate — Smart Hydration System</h3>
+        <p style="font-family:'Inter',sans-serif; font-size:14px; line-height:1.55; color:#3A4257; margin:0;">IoT smart bottle with a custom capacitive level sensor, IMU-based drinking-gesture recognition, offline SD logging, BLE-to-Firebase sync via a Flutter app, and a GPT-4o-mini chatbot for personalized hydration coaching.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:6px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">ESP32</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">BLE</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">C++</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">Flutter</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">Firebase</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">GPT-4o-mini</span>
+        </div>
+        <a href="#contact" style="margin-top:auto; align-self:flex-start; font-family:'JetBrains Mono',monospace; font-weight:600; font-size:12.5px; color:#11C39A; border:1px solid #B7E9DC; padding:8px 14px; border-radius:6px;" style-hover="background:#EAFBF5">Demo → <span style="color:#6B7488;">(repo private)</span></a>
+      </div>
+    </article>
+
+    <!-- project 3: Solar panel defect detection (TEKNOFEST) -->
+    <article style="background:#fff; border:1px solid #E1E4EA; border-radius:10px; overflow:hidden; display:flex; flex-direction:column; transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;" style-hover="transform:translateY(-4px); border-color:#11C39A; box-shadow:0 20px 40px -22px rgba(14,21,37,0.45)">
+      <div style="position:relative; aspect-ratio:16/10; background:#0E1525; overflow:hidden;">
+        <img src="media/solar-panel-detection.gif" alt="Aerial solar-panel inspection — YOLO detecting panels and dusty defects from a drone" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" />
+        <span style="position:absolute; top:8px; right:8px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#fff; background:rgba(14,21,37,0.82); padding:3px 8px; border-radius:4px; pointer-events:none;">2023–24 · TEKNOFEST · FINALIST</span>
+      </div>
+      <div style="padding:20px; display:flex; flex-direction:column; gap:12px; flex:1;">
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:20px; margin:0;">Aerial Solar-Panel Defect Inspection</h3>
+        <p style="font-family:'Inter',sans-serif; font-size:14px; line-height:1.55; color:#3A4257; margin:0;">Dual-UAV solar-farm inspection: top-down drone imagery run through a YOLO detector that localizes panels and flags surface defects — dust, soiling, cracks and bird droppings — for real-time panel-health analytics on embedded hardware.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:6px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">YOLOv8/v5</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">Defect Detection</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">UAV / Aerial</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">Raspberry Pi</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">Real-time</span>
+        </div>
+        <span style="margin-top:auto; align-self:flex-start; font-family:'JetBrains Mono',monospace; font-size:12px; color:#6B7488;">Sample inference · TEKNOFEST Int'l UAV</span>
+      </div>
+    </article>
+
+    <!-- project 4: Combat UAV target detection (TEKNOFEST İLGERU) -->
+    <article style="background:#fff; border:1px solid #E1E4EA; border-radius:10px; overflow:hidden; display:flex; flex-direction:column; transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;" style-hover="transform:translateY(-4px); border-color:#11C39A; box-shadow:0 20px 40px -22px rgba(14,21,37,0.45)">
+      <div style="position:relative; aspect-ratio:16/10; background:#0E1525; overflow:hidden;">
+        <img src="media/uav-combat-detection.gif" alt="Onboard combat-UAV camera — YOLO detecting rival UAVs (İHA) in flight" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" />
+        <span style="position:absolute; top:8px; right:8px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#fff; background:rgba(14,21,37,0.82); padding:3px 8px; border-radius:4px; pointer-events:none;">2023–24 · TEKNOFEST · İLGERU</span>
+      </div>
+      <div style="padding:20px; display:flex; flex-direction:column; gap:12px; flex:1;">
+        <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:20px; margin:0;">Autonomous Combat-UAV Target Detection</h3>
+        <p style="font-family:'Inter',sans-serif; font-size:14px; line-height:1.55; color:#3A4257; margin:0;">Onboard air-to-air detection for a combat UAV: a real-time YOLO model locks onto rival aircraft (İHA) from the drone's own camera feed under fast motion and cluttered terrain, trained on Roboflow-annotated data and deployed on embedded Raspberry Pi hardware.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:6px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">YOLO</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">Target Detection</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">Roboflow</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">Raspberry Pi</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#22306E; background:#F0F2F8; padding:4px 8px; border-radius:4px;">Real-time</span>
+        </div>
+        <span style="margin-top:auto; align-self:flex-start; font-family:'JetBrains Mono',monospace; font-size:12px; color:#6B7488;">Sample inference · TEKNOFEST İLGERU</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ PAPERS ============ -->
+<section id="papers" data-reveal="" style="scroll-margin-top:72px; padding:clamp(40px,6vw,72px) clamp(18px,4vw,40px);">
+  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#11C39A; display:flex; align-items:center; gap:8px; margin-bottom:14px;">
+    <span style="display:inline-block; width:14px; height:10px; border-left:2px solid #11C39A; border-top:2px solid #11C39A;"></span>
+    section: papers · id: 004
+  </div>
+  <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(30px,4.4vw,46px); letter-spacing:-0.02em; margin:0 0 28px;">Publications</h2>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:22px;">
+    <!-- paper 1 -->
+    <article style="background:#fff; border:1px solid #E1E4EA; border-left:4px solid #11C39A; border-radius:0 10px 10px 0; padding:22px; display:flex; flex-direction:column; gap:14px; transition:transform .25s ease, box-shadow .25s ease;" style-hover="transform:translateY(-3px); box-shadow:0 18px 36px -22px rgba(14,21,37,0.4)">
+      <span style="align-self:flex-start; font-family:'JetBrains Mono',monospace; font-size:11px; color:#04241c; background:#EAFBF5; border:1px solid #B7E9DC; padding:4px 9px; border-radius:4px;">IEEE · 2024</span>
+      <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; line-height:1.25; margin:0;">Drone-Assisted Pallet Tracking and Counting System Using YOLOv8</h3>
+      <div style="display:flex; flex-wrap:wrap; gap:6px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; color:#6B7488; border:1px solid #E1E4EA; padding:3px 7px; border-radius:4px;">UAV</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; color:#6B7488; border:1px solid #E1E4EA; padding:3px 7px; border-radius:4px;">YOLOv8</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; color:#6B7488; border:1px solid #E1E4EA; padding:3px 7px; border-radius:4px;">Object Detection</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; color:#6B7488; border:1px solid #E1E4EA; padding:3px 7px; border-radius:4px;">Pallet Counting</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; color:#6B7488; border:1px solid #E1E4EA; padding:3px 7px; border-radius:4px;">Real-time</span>
+      </div>
+      <p style="font-family:'Inter',sans-serif; font-size:13.5px; line-height:1.6; color:#3A4257; margin:0;">A UAV-based system leveraging YOLOv8 for real-time pallet tracking and counting in warehouse and logistics environments…</p>
+      <details style="margin-top:-4px;">
+        <summary style="cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:12px; color:#22306E; list-style:none;">+ full abstract</summary>
+        <p style="font-family:'Inter',sans-serif; font-size:13px; line-height:1.6; color:#6B7488; margin:10px 0 0;">[Full abstract — add from IEEE Xplore.]</p>
+      </details>
+      <a href="#" target="_blank" rel="noopener" style="margin-top:auto; align-self:flex-start; font-family:'JetBrains Mono',monospace; font-weight:600; font-size:12.5px; color:#11C39A; border:1px solid #B7E9DC; padding:8px 14px; border-radius:6px;" style-hover="background:#EAFBF5">Read on IEEE Xplore →</a>
+    </article>
+
+    <!-- paper 2 -->
+    <article style="background:#fff; border:1px solid #E1E4EA; border-left:4px solid #11C39A; border-radius:0 10px 10px 0; padding:22px; display:flex; flex-direction:column; gap:14px; transition:transform .25s ease, box-shadow .25s ease;" style-hover="transform:translateY(-3px); box-shadow:0 18px 36px -22px rgba(14,21,37,0.4)">
+      <span style="align-self:flex-start; font-family:'JetBrains Mono',monospace; font-size:11px; color:#04241c; background:#EAFBF5; border:1px solid #B7E9DC; padding:4px 9px; border-radius:4px;">2024</span>
+      <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; line-height:1.25; margin:0;">Zero-shot Automatic Labeling in Industrial Products</h3>
+      <div style="display:flex; flex-wrap:wrap; gap:6px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; color:#6B7488; border:1px solid #E1E4EA; padding:3px 7px; border-radius:4px;">Zero-shot Learning</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; color:#6B7488; border:1px solid #E1E4EA; padding:3px 7px; border-radius:4px;">Automatic Labeling</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; color:#6B7488; border:1px solid #E1E4EA; padding:3px 7px; border-radius:4px;">Industrial Inspection</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; color:#6B7488; border:1px solid #E1E4EA; padding:3px 7px; border-radius:4px;">Annotation Efficiency</span>
+      </div>
+      <p style="font-family:'Inter',sans-serif; font-size:13.5px; line-height:1.6; color:#3A4257; margin:0;">Zero-shot labeling strategies for automated annotation in industrial inspection pipelines, reducing manual labeling overhead…</p>
+      <details style="margin-top:-4px;">
+        <summary style="cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:12px; color:#22306E; list-style:none;">+ full abstract</summary>
+        <p style="font-family:'Inter',sans-serif; font-size:13px; line-height:1.6; color:#6B7488; margin:10px 0 0;">[Full abstract — add.]</p>
+      </details>
+      <a href="#" target="_blank" rel="noopener" style="margin-top:auto; align-self:flex-start; font-family:'JetBrains Mono',monospace; font-weight:600; font-size:12.5px; color:#11C39A; border:1px solid #B7E9DC; padding:8px 14px; border-radius:6px;" style-hover="background:#EAFBF5">Read →</a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" data-reveal="" style="scroll-margin-top:72px; padding:clamp(40px,6vw,72px) clamp(18px,4vw,40px);">
+  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#11C39A; display:flex; align-items:center; gap:8px; margin-bottom:14px;">
+    <span style="display:inline-block; width:14px; height:10px; border-left:2px solid #11C39A; border-top:2px solid #11C39A;"></span>
+    section: gallery · id: 005 · captured frames
+  </div>
+  <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(30px,4.4vw,46px); letter-spacing:-0.02em; margin:0 0 20px;">From the field</h2>
+
+  <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-bottom:24px;">
+    <sc-for list="{{ filters }}" as="f" hint-placeholder-count="6">
+      <button onClick="{{ f.onClick }}" style="font-family:'JetBrains Mono',monospace; font-size:12px; padding:7px 14px; border-radius:20px; cursor:pointer; border:1px solid {{ f.border }}; background:{{ f.bg }}; color:{{ f.color }};">{{ f.label }}</button>
+    </sc-for>
+  </div>
+
+  <div style="column-width:250px; column-gap:14px;">
+    <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="8">
+      <div style="break-inside:avoid; margin:0 0 14px; position:relative; background:#fff; border:1px solid #E1E4EA; transition:border-color .25s ease;" style-hover="border-color:#11C39A">
+        <div data-gtile="" data-slot="{{ g.slotId }}" data-h="{{ g.h }}" style="position:relative; width:100%; height:{{ g.h }};">
+          <image-slot id="{{ g.slotId }}" shape="rect" placeholder="{{ g.placeholder }}" style="width:100%; height:100%;"></image-slot>
+          <span style="position:absolute; top:6px; left:6px; width:16px; height:16px; border-top:2px solid #11C39A; border-left:2px solid #11C39A; opacity:.85; pointer-events:none;"></span>
+          <span style="position:absolute; bottom:36px; right:6px; width:16px; height:16px; border-bottom:2px solid #11C39A; border-right:2px solid #11C39A; opacity:.85; pointer-events:none;"></span>
+          <button onClick="{{ g.fitToggle }}" title="{{ g.fitTitle }}" style="position:absolute; top:6px; right:6px; z-index:3; display:inline-flex; align-items:center; gap:5px; font-family:'JetBrains Mono',monospace; font-size:10px; padding:4px 8px; border-radius:4px; border:none; cursor:pointer; background:rgba(14,21,37,0.78); color:#fff;" style-hover="background:#11C39A; color:#04241c">{{ g.fitLabel }}</button>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; padding:8px 10px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#6B7488; border-top:1px solid #EEF0F4;">
+          <span style="color:#0E1525;">{{ g.caption }}</span>
+          <span style="color:{{ g.catColor }};">{{ g.date }}</span>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="display:flex; align-items:center; gap:12px; margin-top:26px; padding-top:22px; border-top:1px dashed #D8DCE4;">
+    <span style="display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#6B7488;">
+      <span style="display:inline-flex; gap:4px;">
+        <i style="width:5px; height:5px; border-radius:50%; background:#11C39A; display:inline-block; animation:brk 1s ease-in-out infinite alternate;"></i>
+        <i style="width:5px; height:5px; border-radius:50%; background:#11C39A; display:inline-block; animation:brk 1s ease-in-out .2s infinite alternate;"></i>
+        <i style="width:5px; height:5px; border-radius:50%; background:#11C39A; display:inline-block; animation:brk 1s ease-in-out .4s infinite alternate;"></i>
+      </span>
+      more frames incoming — new work is being captured
+    </span>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" data-reveal="" style="scroll-margin-top:72px; padding:clamp(40px,6vw,72px) clamp(18px,4vw,40px);">
+  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#11C39A; display:flex; align-items:center; gap:8px; margin-bottom:14px;">
+    <span style="display:inline-block; width:14px; height:10px; border-left:2px solid #11C39A; border-top:2px solid #11C39A;"></span>
+    section: skills · id: 006
+  </div>
+  <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(30px,4.4vw,46px); letter-spacing:-0.02em; margin:0 0 28px;">Stack</h2>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:26px;">
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#22306E; font-weight:600; margin-bottom:12px;">// Languages</div>
+      <div style="display:flex; flex-wrap:wrap; gap:7px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Python</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">C++</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">C</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">SQL</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Java</span>
+      </div>
+    </div>
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#22306E; font-weight:600; margin-bottom:12px;">// CV &amp; Deep Learning</div>
+      <div style="display:flex; flex-wrap:wrap; gap:7px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">YOLOv8/v11</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Faster R-CNN</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">U-Net</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">SAM</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">ByteTrack</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">RF-DETR</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">YOLO-Pose</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">OCR (EasyOCR, Tesseract)</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Isolation Forest</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Pseudo Labeling</span>
+      </div>
+    </div>
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#22306E; font-weight:600; margin-bottom:12px;">// ML &amp; AI</div>
+      <div style="display:flex; flex-wrap:wrap; gap:7px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">PyTorch</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">TensorFlow</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Scikit-learn</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">LightGBM</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">XGBoost</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">LLaMA</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Mistral</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">RAG</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">LangChain</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">BERT</span>
+      </div>
+    </div>
+    <div>
+      
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#22306E; font-weight:600; margin-bottom:12px;">// MLOps &amp; Deployment</div><div style="display:flex; flex-wrap:wrap; gap:7px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">FastAPI</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Docker</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">ONNX</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">TensorRT</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Git</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Azure DevOps</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Firebase</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">SeqLog</span>
+      </div>
+    </div>
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#22306E; font-weight:600; margin-bottom:12px;">// Libraries &amp; Tools</div>
+      <div style="display:flex; flex-wrap:wrap; gap:7px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">OpenCV</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">NumPy</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Pandas</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Matplotlib</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Ultralytics</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Roboflow</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">LabelImg</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Anaconda</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Linux</span>
+      </div>
+    </div>
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#22306E; font-weight:600; margin-bottom:12px;">// Embedded &amp; IoT</div>
+      <div style="display:flex; flex-wrap:wrap; gap:7px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">ESP32</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">BLE</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">C++</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">IMU</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Flutter</span>
+      </div>
+    </div>
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#22306E; font-weight:600; margin-bottom:12px;">// Languages (spoken)</div>
+      <div style="display:flex; flex-wrap:wrap; gap:7px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">Turkish — Native</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#0E1525; background:#fff; border:1px solid #E1E4EA; padding:6px 10px; border-radius:5px;">English — B2</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / FOOTER ============ -->
+<footer id="contact" data-reveal="" style="scroll-margin-top:72px; margin:clamp(30px,5vw,60px) clamp(10px,2vw,20px) 20px; padding:clamp(40px,6vw,72px) clamp(24px,4vw,52px); background:#0E1525; color:#F6F7F9; border-radius:16px; background-image:radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size:22px 22px;">
+  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#11C39A; margin-bottom:18px;">section: contact · id: 007</div>
+  <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(28px,4.6vw,48px); letter-spacing:-0.02em; line-height:1.08; margin:0 0 30px; max-width:20ch; text-wrap:balance;">Let's build something that runs in real time.</h2>
+  <div style="display:flex; flex-wrap:wrap; gap:12px; margin-bottom:34px;">
+    <a href="mailto:524hasanbakr@gmail.com" style="display:inline-flex; align-items:center; gap:8px; background:#11C39A; color:#04241c; font-family:'JetBrains Mono',monospace; font-weight:600; font-size:13px; padding:12px 20px; border-radius:6px;" style-hover="background:#0FB18C">524hasanbakr@gmail.com</a>
+    <a href="media/HasanBakir_CV.pdf" onClick="{{ downloadCV }}" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; background:transparent; color:#F6F7F9; font-family:'JetBrains Mono',monospace; font-weight:600; font-size:13px; padding:12px 20px; border-radius:6px; border:1px solid rgba(255,255,255,0.22);" style-hover="border-color:#11C39A; color:#11C39A">Download Resume (PDF)</a>
+  </div>
+  <div style="display:flex; flex-wrap:wrap; gap:22px; font-family:'JetBrains Mono',monospace; font-size:12.5px; margin-bottom:40px;">
+    <a href="https://linkedin.com/in/hasan-bakir" target="_blank" rel="noopener" style="color:#9AA3B5;" style-hover="color:#11C39A">linkedin.com/in/hasan-bakir</a>
+    <a href="https://github.com/hasan-bakr" target="_blank" rel="noopener" style="color:#9AA3B5;" style-hover="color:#11C39A">github.com/hasan-bakr</a>
+    <span style="color:#9AA3B5;">Istanbul, Turkey</span>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,0.12); padding-top:18px; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#6B7488;">© 2026 Hasan Bakır · built &amp; deployed on GitHub Pages</div>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;thesis&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;A&quot;, &quot;B&quot;], &quot;default&quot;: &quot;A&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Hero&quot; },
+  &quot;curve&quot;: { &quot;editor&quot;: &quot;range&quot;, &quot;min&quot;: 0, &quot;max&quot;: 1, &quot;step&quot;: 0.05, &quot;default&quot;: 0.6, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Roadmap&quot;, &quot;unit&quot;: &quot;&quot; }
+}">
+class Component extends DCLogic {
+  state = { filter: 'All' };
+
+  loadTileFit() {
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem('hb_tilefit') || '{}') || {}; } catch (e) {}
+    return saved;
+  }
+
+  waypoints = [
+    { date:'2022', title:'Sakarya University — B.Sc. Computer Engineering', cat:'education', details:['Started B.Sc.','2022–2026'] },
+    { date:'2023–24', title:'TEKNOFEST — Poyraz Havacılık, Int\u2019l UAV · FINALIST', cat:'competition', details:['Dual-UAV solar-farm inspection','YOLOv8/v5 defect detection (cracks, soiling)','Real-time on Raspberry Pi, panel-health analytics'] },
+    { date:'2023–24', title:'TEKNOFEST — İLGERU, Combat UAV', cat:'competition', details:['Autonomous target detection','Roboflow annotation, real-time YOLO on embedded Pi'] },
+    { date:'Oct–Nov 2024', title:'AISOFT — Computer Vision Engineering Intern', cat:'experience', details:['Image stitching (ORB / SIFT, homography)','Data / feature pipelines (Pandas, Matplotlib)'] },
+    { date:'Dec 2024 – Feb 2026', title:'AYGAZ (Koç Group) — AI Software Engineering Intern', cat:'experience', big:true, innerPoint:{ date:'2025', cat:'competition', title:'NASA Space Apps — Global Nominee & Local 2nd', at:0.55 }, details:['Dual-Vision truck monitoring — YOLOv11 + ByteTrack, 30–45 FPS, ONNX/TensorRT','License-plate OCR (~100% accuracy)','Packaging inspection system','Agentic RAG (LLaMA / Mistral + NL→SQL)','Isolation Forest anomaly detection','FastAPI “Digital Factory” platform'] },
+    { date:'2026', title:'Graduation — B.Sc. Computer Engineering', cat:'education', details:['Sakarya University','GPA 3.02 / 4.00'] },
+  ];
+
+  colors = { education:'#7C6CF5', competition:'#F5A524', publication:'#11C39A', experience:'#2E5BFF', project:'#FF5C6C' };
+
+  galleryData = [
+    { slotId:'hb_g1', category:'TEKNOFEST', caption:'Solar-farm test flight', date:'2024', h:'240px' },
+    { slotId:'hb_g3', category:'NASA', caption:'SHIFT seismic dashboard', date:'2023', h:'200px' },
+    { slotId:'hb_g5', category:'Lab', caption:'Annotation & training setup', date:'2024', h:'180px' },
+    { slotId:'hb_g6', category:'TEKNOFEST', caption:'Combat UAV integration', date:'2024', h:'240px' },
+  ];
+
+  reduced = false;
+
+  componentDidMount() {
+    this.reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this._tileFit = this.loadTileFit();
+    this.animateConfidence();
+    this.setupReveals();
+    this.setupNav();
+    this.buildRoadmap();
+    this.setupMediaSlots();
+    this.setupDualVideo();
+    this.setupWatermate();
+    this.galleryFitSettle();
+    this._onResize = () => { clearTimeout(this._rz); this._rz = setTimeout(() => this.buildRoadmap(), 150); };
+    window.addEventListener('resize', this._onResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+    if (this._navObs) this._navObs.disconnect();
+    if (this._revObs) this._revObs.disconnect();
+    if (this._rmObs) this._rmObs.disconnect();
+    if (this._galleryPoll) clearTimeout(this._galleryPoll);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.filter !== this.state.filter) this.galleryFitSettle(3);
+    if ((prevProps.curve ?? 0.6) !== (this.props.curve ?? 0.6)) this.buildRoadmap();
+  }
+
+  animateConfidence() {
+    const el = this.$('[data-conf]');
+    if (!el) return;
+    if (this.reduced) { el.textContent = '0.99'; return; }
+    const dur = 1400, t0 = performance.now();
+    const step = (t) => {
+      const p = Math.min(1, (t - t0) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = (eased * 0.99).toFixed(2);
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = '0.99';
+    };
+    requestAnimationFrame(step);
+  }
+
+  setupReveals() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (this.reduced || !('IntersectionObserver' in window)) return;
+    els.forEach((el) => { el.style.opacity = '0'; el.style.transform = 'translateY(20px)'; el.style.transition = 'opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1)'; });
+    this._revObs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; this._revObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    els.forEach((el) => this._revObs.observe(el));
+    setTimeout(() => els.forEach((el) => { el.style.opacity = '1'; el.style.transform = 'none'; }), 2500);
+  }
+
+  setupNav() {
+    const links = Array.from(document.querySelectorAll('[data-nav]'));
+    const map = {}; links.forEach((l) => { map[l.getAttribute('data-nav')] = l; });
+    const ids = ['about','roadmap','projects','papers','gallery','skills','contact'];
+    const secs = ids.map((id) => document.getElementById(id)).filter(Boolean);
+    if (!('IntersectionObserver' in window)) return;
+    const setActive = (id) => {
+      links.forEach((l) => { l.style.color = '#6B7488'; l.style.borderBottomColor = 'transparent'; });
+      const a = map[id]; if (a) { a.style.color = '#0E1525'; a.style.borderBottomColor = '#11C39A'; }
+    };
+    this._navObs = new IntersectionObserver((entries) => {
+      const vis = entries.filter((e) => e.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+      if (vis[0]) setActive(vis[0].target.id);
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    secs.forEach((s) => this._navObs.observe(s));
+  }
+
+  fitMap() {
+    if (!this._tileFit) this._tileFit = this.loadTileFit();
+    return this._tileFit;
+  }
+
+  tileMode(slotId) {
+    return this.fitMap()[slotId] === 'Natural' ? 'Natural' : 'Uniform';
+  }
+
+  toggleTileFit(slotId) {
+    const map = this.fitMap();
+    map[slotId] = map[slotId] === 'Natural' ? 'Uniform' : 'Natural';
+    try { localStorage.setItem('hb_tilefit', JSON.stringify(map)); } catch (e) {}
+    this.galleryFitSettle(4);   // apply now (reads the instance map, not React state)
+    this.forceUpdate();         // refresh the button label
+  }
+
+  // Bounded settle: reapply a handful of times so late-loading images get their
+  // natural aspect, then stop — no perpetual timer (that caused the jitter).
+  galleryFitSettle(n) {
+    n = n == null ? 8 : n;
+    this.applyGalleryFit();
+    if (this._galleryPoll) clearTimeout(this._galleryPoll);
+    if (n > 0) this._galleryPoll = setTimeout(() => this.galleryFitSettle(n - 1), 500);
+  }
+
+  applyGalleryFit() {
+    const tiles = document.querySelectorAll('[data-gtile]');
+    tiles.forEach((tile) => {
+      const slotId = tile.getAttribute('data-slot');
+      const natural = this.tileMode(slotId) === 'Natural';
+      const slot = tile.querySelector('image-slot');
+      let img = null;
+      try { img = slot && slot.shadowRoot && slot.shadowRoot.querySelector('img'); } catch (e) {}
+      let h, ar;
+      if (natural && img && img.naturalWidth > 1 && img.naturalHeight > 1) {
+        h = 'auto'; ar = img.naturalWidth + ' / ' + img.naturalHeight;
+      } else {
+        h = tile.getAttribute('data-h') || '200px'; ar = '';
+      }
+      if (tile.style.height !== h) tile.style.height = h;
+      if (tile.style.aspectRatio !== ar) tile.style.aspectRatio = ar;
+    });
+  }
+
+  downloadCV(e) {
+    e.preventDefault();
+    fetch('media/HasanBakir_CV.pdf')
+      .then((r) => r.blob())
+      .then((blob) => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Hasan-Bakır-CV.pdf';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 4000);
+      })
+      .catch(() => window.open('media/HasanBakir_CV.pdf', '_blank'));
+  }
+
+  setupWatermate() {
+    const root = document.querySelector('[data-wm]');
+    if (!root) return;
+    const track = root.querySelector('[data-wm-track]');
+    const dots = Array.from(root.querySelectorAll('[data-wm-dot]'));
+    let i = 0;
+    const go = (n) => {
+      i = (n + 2) % 2;
+      track.style.transform = 'translateX(' + (-i * 50) + '%)';
+      dots.forEach((d, k) => { d.style.background = k === i ? '#11C39A' : '#C6CCD8'; });
+    };
+    root.querySelector('[data-wm-prev]').addEventListener('click', () => go(i - 1));
+    root.querySelector('[data-wm-next]').addEventListener('click', () => go(i + 1));
+    dots.forEach((d) => d.addEventListener('click', () => go(parseInt(d.getAttribute('data-wm-dot'), 10))));
+    go(0);
+  }
+
+  setupDualVideo() {
+    const wrap = document.querySelector('[data-dual-video]');
+    if (!wrap) return;
+    const main = wrap.querySelector('[data-main]');
+    const tac = wrap.querySelector('[data-tactical]');
+    if (!main || !tac) return;
+    // React drops muted/loop as properties — set them in JS so muted-autoplay is allowed.
+    [main, tac].forEach((v) => { v.muted = true; v.loop = true; v.playsInline = true; v.setAttribute('playsinline', ''); });
+    // Starts are aligned; keep the tactical inset locked to the main game's timeline.
+    const sync = () => { if (Math.abs(tac.currentTime - main.currentTime) > 0.25) { try { tac.currentTime = main.currentTime; } catch (e) {} } };
+    main.addEventListener('timeupdate', sync);
+    main.addEventListener('seeked', sync);
+    main.addEventListener('play', () => { tac.play().catch(() => {}); });
+    main.addEventListener('pause', () => tac.pause());
+    // main is shorter and loops; realign the tactical clip on every loop.
+    main.addEventListener('seeking', sync);
+    [main, tac].forEach((v) => v.play().catch(() => {}));
+  }
+
+  mediaDB() {
+    if (this._dbP) return this._dbP;
+    this._dbP = new Promise((resolve, reject) => {
+      const req = indexedDB.open('hb_media', 1);
+      req.onupgradeneeded = () => { req.result.createObjectStore('files'); };
+      req.onsuccess = () => resolve(req.result);
+      req.onerror = () => reject(req.error);
+    });
+    return this._dbP;
+  }
+  async mediaGet(key) {
+    const db = await this.mediaDB();
+    return new Promise((res) => { const t = db.transaction('files', 'readonly').objectStore('files').get(key); t.onsuccess = () => res(t.result || null); t.onerror = () => res(null); });
+  }
+  async mediaPut(key, val) {
+    const db = await this.mediaDB();
+    return new Promise((res, rej) => { const t = db.transaction('files', 'readwrite').objectStore('files').put(val, key); t.onsuccess = () => res(); t.onerror = () => rej(t.error); });
+  }
+
+  setupMediaSlots() {
+    const slots = Array.from(document.querySelectorAll('[data-media-slot]'));
+    slots.forEach((slot) => {
+      const key = 'hb_media_' + slot.getAttribute('data-media-slot');
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/gif,image/png,image/jpeg,image/webp,video/mp4,video/webm,video/quicktime';
+      input.style.display = 'none';
+      slot.appendChild(input);
+
+      const render = (blob, type) => {
+        Array.from(slot.querySelectorAll('img,video')).forEach((n) => { if (n.src && n.src.indexOf('blob:') === 0) URL.revokeObjectURL(n.src); n.remove(); });
+        if (!blob) { slot.textContent = slot.getAttribute('data-ph'); slot.appendChild(input); return; }
+        slot.textContent = '';
+        const url = typeof blob === 'string' ? blob : URL.createObjectURL(blob);
+        let media;
+        if (type && type.indexOf('video') === 0) {
+          media = document.createElement('video');
+          media.src = url; media.autoplay = true; media.loop = true; media.muted = true;
+          media.playsInline = true; media.setAttribute('playsinline', '');
+        } else {
+          media = document.createElement('img');
+          media.src = url;
+        }
+        media.style.cssText = 'position:absolute; inset:0; width:100%; height:100%; object-fit:cover;';
+        slot.appendChild(media);
+        slot.appendChild(input);
+      };
+
+      const defSrc = slot.getAttribute('data-default-src');
+      this.mediaGet(key).then((rec) => {
+        if (rec && rec.blob) render(rec.blob, rec.type);
+        else if (defSrc) render(defSrc, slot.getAttribute('data-default-type') || 'image/gif');
+        else { slot.textContent = slot.getAttribute('data-ph'); slot.appendChild(input); }
+      });
+
+      const ingest = (file) => {
+        if (!file) return;
+        const okImg = /^image\/(gif|png|jpeg|webp)$/.test(file.type);
+        const okVid = /^video\//.test(file.type);
+        if (!okImg && !okVid) { slot.textContent = 'Use a GIF, image, or video file.'; slot.appendChild(input); return; }
+        if (file.size > 120 * 1024 * 1024) { slot.textContent = 'Too large (max ~120MB).'; slot.appendChild(input); return; }
+        render(file, file.type);
+        this.mediaPut(key, { blob: file, type: file.type }).catch(() => { slot.textContent = 'Could not save in browser storage.'; slot.appendChild(input); });
+      };
+
+      slot.addEventListener('click', (e) => { if (e.target === input) return; input.click(); });
+      input.addEventListener('change', () => { ingest(input.files && input.files[0]); input.value = ''; });
+      ['dragenter', 'dragover'].forEach((ev) => slot.addEventListener(ev, (e) => { e.preventDefault(); slot.style.outline = '2px dashed #11C39A'; slot.style.outlineOffset = '-4px'; }));
+      ['dragleave', 'drop'].forEach((ev) => slot.addEventListener(ev, (e) => { e.preventDefault(); slot.style.outline = 'none'; }));
+      slot.addEventListener('drop', (e) => { ingest(e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0]); });
+    });
+  }
+
+  $(sel) { const host = this.el || document; return (host.querySelector ? host.querySelector(sel) : document.querySelector(sel)) || document.querySelector(sel); }
+
+  // Always-visible alternating timeline: each waypoint's full detail sits on the
+  // empty side, joined to its node by a dashed "flight-route" connector + arrow.
+  buildRoadmap() {
+    const wrap = document.querySelector('[data-roadmap]');
+    const rows = document.querySelector('[data-rm-rows]');
+    const spine = document.querySelector('[data-rm-spine]');
+    if (!wrap || !rows) return;
+    const w = wrap.clientWidth || 900;
+    const N = this.waypoints.length;
+    rows.style.height = '';
+    rows.style.position = '';
+
+    if (w >= 860 && w / N >= 150) {
+      if (spine) spine.style.display = 'none';
+      this.buildRoadmapHorizontal(wrap, rows, w);
+      return;
+    }
+    if (spine) spine.style.display = '';
+
+    const narrow = w < 820;
+    if (spine) spine.style.left = narrow ? '18px' : '50%';
+
+    const mk = (tag, css, txt) => { const e = document.createElement(tag); if (css) e.style.cssText = css; if (txt != null) e.textContent = txt; return e; };
+
+    const isRange = (wp) => /[–-]/.test(wp.date);
+
+    const card = (wp) => {
+      const col = this.colors[wp.cat];
+      const range = isRange(wp);
+      // Range (spanning) cards get a dashed accent border to read as a duration, not a point.
+      const c = mk('div', 'background:#fff; border:1px ' + (range ? 'dashed' : 'solid') + ' #E1E4EA; border-top:3px solid ' + col + '; border-radius:10px; padding:14px 16px; box-shadow:0 12px 28px -20px rgba(14,21,37,0.5); width:100%; max-width:' + (narrow ? '100%' : '360px') + ';');
+      if (range) c.style.borderColor = col + '4d';
+      if (wp.big) { c.style.boxShadow = '0 16px 34px -18px ' + col + '66'; }
+      const tagRow = mk('div', 'display:flex; align-items:center; gap:7px; font-family:JetBrains Mono, monospace; font-size:11px; color:' + col + '; margin-bottom:6px; flex-wrap:wrap;');
+      tagRow.appendChild(mk('i', 'width:8px; height:8px; border-radius:50%; background:' + col + '; display:inline-block;'));
+      tagRow.appendChild(mk('span', null, wp.cat + (wp.big ? ' · milestone' : '')));
+      if (range) tagRow.appendChild(mk('span', 'font-size:10px; letter-spacing:.02em; color:' + col + '; border:1px dashed ' + col + '80; border-radius:20px; padding:1px 8px;', '⟷ span'));
+      c.appendChild(tagRow);
+      c.appendChild(mk('div', 'font-family:JetBrains Mono, monospace; font-size:11.5px; color:#6B7488; margin-bottom:3px;', wp.date));
+      c.appendChild(mk('h4', 'font-family:Space Grotesk, sans-serif; font-weight:600; font-size:' + (wp.big ? '18px' : '16px') + '; line-height:1.25; margin:0 0 9px; color:#0E1525;', wp.title));
+      const ul = mk('ul', 'margin:0; padding-left:16px; display:flex; flex-direction:column; gap:5px;');
+      (wp.details || []).forEach((d) => ul.appendChild(mk('li', 'font-family:Inter, sans-serif; font-size:13px; line-height:1.45; color:#3A4257;', d)));
+      c.appendChild(ul);
+      return c;
+    };
+
+    // Each stage renders as a short vertical line on the spine; a range is a
+    // longer segment (a duration), a single date a shorter one. An innerPoint
+    // (e.g. NASA during the AYGAZ role) is drawn as a dot on that segment with
+    // an arrow + chip pointing out to the empty side.
+    const node = (wp, emptySide) => {
+      const col = this.colors[wp.cat];
+      const range = isRange(wp);
+      const len = wp.big ? 48 : (range ? 34 : 18);
+      const n = mk('div', 'position:relative; width:4px; height:' + len + 'px; border-radius:999px; background:' + col + '; flex:0 0 auto;');
+
+      if (wp.innerPoint) {
+        const ip = wp.innerPoint;
+        const ipCol = this.colors[ip.cat] || col;
+        const y = Math.round(len * (ip.at != null ? ip.at : 0.5));
+        const dot = mk('div', 'position:absolute; left:50%; top:' + y + 'px; transform:translate(-50%,-50%); width:12px; height:12px; border-radius:50%; background:#F6F7F9; border:2.5px solid ' + ipCol + '; box-shadow:0 0 0 4px ' + ipCol + '22; z-index:2;');
+        dot.appendChild(mk('span', 'position:absolute; inset:0; margin:auto; width:4px; height:4px; border-radius:50%; background:' + ipCol + ';'));
+        n.appendChild(dot);
+
+        const toLeft = emptySide === 'left';
+        const lbl = mk('div', 'position:absolute; top:' + y + 'px; ' + (toLeft ? 'right:10px;' : 'left:10px;') + ' transform:translateY(-50%); display:flex; align-items:center; gap:6px; white-space:nowrap; z-index:3;');
+        const line = mk('div', 'width:20px; border-top:2px dashed ' + ipCol + ';');
+        const arrow = mk('span', 'font-family:JetBrains Mono, monospace; font-size:12px; line-height:1; color:' + ipCol + ';', toLeft ? '▸' : '◂');
+        const chip = mk('div', 'background:#fff; border:1px solid ' + ipCol + '66; border-left:3px solid ' + ipCol + '; border-radius:6px; padding:4px 9px; box-shadow:0 6px 16px -10px rgba(14,21,37,0.5);');
+        chip.appendChild(mk('div', 'font-family:JetBrains Mono, monospace; font-size:9.5px; color:' + ipCol + '; margin-bottom:1px;', ip.date + ' · in parallel'));
+        chip.appendChild(mk('div', 'font-family:Space Grotesk, sans-serif; font-weight:600; font-size:11.5px; color:#0E1525;', ip.title));
+        if (toLeft) { lbl.appendChild(chip); lbl.appendChild(arrow); lbl.appendChild(line); }
+        else { lbl.appendChild(line); lbl.appendChild(arrow); lbl.appendChild(chip); }
+        n.appendChild(lbl);
+      }
+      return n;
+    };
+
+    // dashed connector; dir 'toRight' = arrow points right (card is on the left)
+    const connector = (col, dir) => {
+      const c = mk('div', 'display:flex; align-items:center; flex:0 0 auto;');
+      const line = mk('div', 'width:' + (narrow ? 16 : 30) + 'px; border-top:2px dashed ' + col + ';');
+      const arrow = mk('span', 'font-family:JetBrains Mono, monospace; font-size:13px; line-height:1; color:' + col + '; margin:0 -1px;', dir === 'toRight' ? '▸' : '◂');
+      if (dir === 'toRight') { c.appendChild(line); c.appendChild(arrow); }
+      else { c.appendChild(arrow); c.appendChild(line); }
+      return c;
+    };
+
+    rows.innerHTML = '';
+    const rowEls = [];
+    this.waypoints.forEach((wp, i) => {
+      const col = this.colors[wp.cat];
+      const nodeColW = 10;
+      const row = mk('div', 'display:grid; align-items:center;');
+      if (narrow) {
+        row.style.gridTemplateColumns = nodeColW + 'px 1fr';
+        const cc = mk('div', 'display:flex; align-items:center; justify-content:center;');
+        cc.appendChild(node(wp, 'left'));
+        const rc = mk('div', 'display:flex; align-items:center;');
+        rc.appendChild(connector(col, 'toLeft'));
+        rc.appendChild(card(wp));
+        row.appendChild(cc); row.appendChild(rc);
+      } else {
+        row.style.gridTemplateColumns = '1fr ' + nodeColW + 'px 1fr';
+        const side = i % 2 === 0 ? 'right' : 'left';
+        const emptySide = side === 'right' ? 'left' : 'right';
+        const leftCell = mk('div', 'display:flex; align-items:center; justify-content:flex-end;');
+        const centerCell = mk('div', 'display:flex; align-items:center; justify-content:center;');
+        const rightCell = mk('div', 'display:flex; align-items:center; justify-content:flex-start;');
+        centerCell.appendChild(node(wp, emptySide));
+        if (side === 'left') { leftCell.appendChild(card(wp)); leftCell.appendChild(connector(col, 'toRight')); }
+        else { rightCell.appendChild(connector(col, 'toLeft')); rightCell.appendChild(card(wp)); }
+        row.appendChild(leftCell); row.appendChild(centerCell); row.appendChild(rightCell);
+      }
+      rows.appendChild(row);
+      rowEls.push(row);
+    });
+
+    this.revealRoadmap(wrap, rowEls);
+  }
+
+  // Compact left-to-right layout used when the section is wide enough for every
+  // waypoint to get its own column; a gently curved dashed route connects the
+  // nodes and each waypoint's mini-card sits alternately above/below it.
+  buildRoadmapHorizontal(wrap, rows, w) {
+    const mk = (tag, css, txt) => { const e = document.createElement(tag); if (css) e.style.cssText = css; if (txt != null) e.textContent = txt; return e; };
+    const isRange = (wp) => /[–-]/.test(wp.date);
+    const N = this.waypoints.length;
+    const pad = 54;
+    const usable = Math.max(1, w - pad * 2);
+    const step = N > 1 ? usable / (N - 1) : 0;
+    const amp = 20 * (this.props.curve ?? 0.6);
+    const cardW = Math.min(step - 14, 190);
+    const cardH = 128;
+    const gap = 16;
+    // reserve room for an innerPoint callout (e.g. NASA) so it clears the cards
+    const innerBelow = this.waypoints.some((wp, i) => wp.innerPoint && i % 2 === 0);
+    const innerAbove = this.waypoints.some((wp, i) => wp.innerPoint && i % 2 === 1);
+    const innerClr = gap + cardH + 14;
+    const topPad = innerAbove ? innerClr + 44 : 0;
+    const baseY = 150 + topPad;
+    const height = baseY + cardH + gap + 10 + (innerBelow ? innerClr + 44 : 0);
+    rows.style.position = 'relative';
+    rows.style.height = height + 'px';
+    rows.innerHTML = '';
+
+    const NS = 'http://www.w3.org/2000/svg';
+    const svgEl = (n, a) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); return e; };
+    const pts = this.waypoints.map((wp, i) => ({ x: pad + i * step, y: baseY }));
+
+    let d = `M ${pts[0].x.toFixed(1)} ${pts[0].y.toFixed(1)}`;
+    for (let i = 1; i < pts.length; i++) {
+      const mx = (pts[i - 1].x + pts[i].x) / 2;
+      const bulge = (i % 2 === 1 ? -1 : 1) * amp;
+      const cy = baseY + bulge;
+      d += ` C ${mx.toFixed(1)} ${cy.toFixed(1)} ${mx.toFixed(1)} ${cy.toFixed(1)} ${pts[i].x.toFixed(1)} ${pts[i].y.toFixed(1)}`;
+    }
+    const svg = svgEl('svg', { width: w, height: height, viewBox: `0 0 ${w} ${height}`, style: 'position:absolute; inset:0; overflow:visible; z-index:0;' });
+    svg.appendChild(svgEl('path', { d, fill: 'none', stroke: '#22306E', 'stroke-opacity': '0.18', 'stroke-width': '2', 'stroke-dasharray': '6 7', 'stroke-linecap': 'round' }));
+    rows.appendChild(svg);
+
+    // tangent angle (radians) of the curved route at waypoint k, so each stage's
+    // short line can be rotated to flow along the curve.
+    const bulgeOf = (seg) => (seg % 2 === 1 ? -1 : 1) * amp;
+    const tangentAt = (k) => {
+      let dx = 0, dy = 0;
+      if (k > 0) { const mx = (pts[k - 1].x + pts[k].x) / 2; dx += pts[k].x - mx; dy += baseY - (baseY + bulgeOf(k)); }
+      if (k < pts.length - 1) { const mx2 = (pts[k].x + pts[k + 1].x) / 2; dx += mx2 - pts[k].x; dy += (baseY + bulgeOf(k + 1)) - baseY; }
+      return Math.atan2(dy, dx);
+    };
+
+    const rowEls = [];
+    this.waypoints.forEach((wp, i) => {
+      const col = this.colors[wp.cat];
+      const p = pts[i];
+      const above = i % 2 === 0;
+      const range = isRange(wp);
+      const ang = tangentAt(i);
+      const deg = (ang * 180 / Math.PI).toFixed(2);
+      const cos = Math.cos(ang), sin = Math.sin(ang);
+
+      // each stage = short line segment on the route, rotated to follow the curve
+      const segW = wp.big ? 46 : (range ? 32 : 16);
+      const node = mk('div', 'position:absolute; z-index:2; left:' + Math.round(p.x) + 'px; top:' + p.y + 'px; transform:translate(-50%,-50%) rotate(' + deg + 'deg); width:' + segW + 'px; height:4px; border-radius:999px; background:' + col + ';');
+      rows.appendChild(node);
+
+      if (wp.innerPoint) {
+        const ip = wp.innerPoint;
+        const ipCol = this.colors[ip.cat] || col;
+        const dist = ((ip.at != null ? ip.at : 0.5) - 0.5) * segW;
+        const dx = p.x + dist * cos, dy = p.y + dist * sin;
+        const dot = mk('div', 'position:absolute; z-index:3; left:' + dx.toFixed(1) + 'px; top:' + dy.toFixed(1) + 'px; transform:translate(-50%,-50%); width:12px; height:12px; border-radius:50%; background:#F6F7F9; border:2.5px solid ' + ipCol + '; box-shadow:0 0 0 4px ' + ipCol + '22;');
+        dot.appendChild(mk('span', 'position:absolute; inset:0; margin:auto; width:4px; height:4px; border-radius:50%; background:' + ipCol + ';'));
+        rows.appendChild(dot);
+        const chipBelow = above;
+        const stemTop = chipBelow ? dy : dy - innerClr;
+        const stem = mk('div', 'position:absolute; z-index:4; left:' + dx.toFixed(1) + 'px; top:' + stemTop.toFixed(1) + 'px; transform:translateX(-50%); width:0; height:' + innerClr + 'px; border-left:2px dashed ' + ipCol + ';');
+        rows.appendChild(stem);
+        const chip = mk('div', 'position:absolute; z-index:5; left:' + dx.toFixed(1) + 'px; top:' + (chipBelow ? dy + innerClr + 4 : dy - innerClr - 4).toFixed(1) + 'px; transform:translate(-50%,' + (chipBelow ? '0' : '-100%') + '); white-space:nowrap; background:#fff; border:1px solid ' + ipCol + '66; border-left:3px solid ' + ipCol + '; border-radius:6px; padding:3px 8px; box-shadow:0 6px 16px -10px rgba(14,21,37,0.5);');
+        chip.appendChild(mk('div', 'font-family:JetBrains Mono, monospace; font-size:9px; color:' + ipCol + '; margin-bottom:1px;', ip.date + ' · in parallel'));
+        chip.appendChild(mk('div', 'font-family:Space Grotesk, sans-serif; font-weight:600; font-size:10.5px; color:#0E1525;', ip.title));
+        rows.appendChild(chip);
+        rowEls.push(dot, stem, chip);
+      }
+
+      const half = 2;
+      const connTop = above ? p.y - gap : p.y + half;
+      const conn = mk('div', 'position:absolute; z-index:1; left:' + Math.round(p.x) + 'px; top:' + connTop + 'px; transform:translateX(-50%); width:0; height:' + (gap - half) + 'px; border-left:2px dashed ' + col + '99;');
+      rows.appendChild(conn);
+
+      const cardTop = above ? (p.y - gap - cardH) : (p.y + gap);
+      // keep edge cards fully inside the section instead of clipping off-screen
+      const cLeft = Math.max(cardW / 2 + 2, Math.min(p.x, w - cardW / 2 - 2));
+      const card = mk('div', 'position:absolute; z-index:2; left:' + cLeft.toFixed(1) + 'px; top:' + cardTop + 'px; transform:translateX(-50%); width:' + cardW + 'px; height:' + cardH + 'px; overflow:hidden; background:#fff; border:1px ' + (range ? 'dashed' : 'solid') + ' ' + (range ? col + '4d' : '#E1E4EA') + '; border-top:3px solid ' + col + '; border-radius:9px; padding:9px 10px; box-shadow:0 10px 22px -16px rgba(14,21,37,0.45); box-sizing:border-box;');
+      card.appendChild(mk('div', 'font-family:JetBrains Mono, monospace; font-size:10px; color:#6B7488; margin-bottom:2px;', wp.date));
+      card.appendChild(mk('h4', 'font-family:Space Grotesk, sans-serif; font-weight:600; font-size:12.5px; line-height:1.25; margin:0 0 5px; color:#0E1525; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;', wp.title));
+      if (wp.details && wp.details[0]) card.appendChild(mk('div', 'font-family:Inter, sans-serif; font-size:10.5px; line-height:1.35; color:#3A4257; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;', wp.details[0]));
+      rows.appendChild(card);
+      rowEls.push(node, conn, card);
+    });
+
+    this.revealRoadmap(wrap, rowEls, true);
+  }
+
+  revealRoadmap(wrap, rowEls, opacityOnly) {
+    if (this.reduced || !('IntersectionObserver' in window)) return;
+    // opacityOnly: elements carry their own transform (rotate/translate) that we
+    // must NOT clobber — animate opacity alone so the curve alignment survives.
+    rowEls.forEach((r) => {
+      r.style.opacity = '0';
+      if (!opacityOnly) r.style.transform = 'translateY(16px)';
+      r.style.transition = 'opacity .55s ease' + (opacityOnly ? '' : ', transform .55s cubic-bezier(.2,.8,.2,1)');
+    });
+    if (this._rmObs) this._rmObs.disconnect();
+    const play = () => rowEls.forEach((r, i) => setTimeout(() => { r.style.opacity = '1'; if (!opacityOnly) r.style.transform = 'none'; }, i * 90));
+    this._rmObs = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) { play(); this._rmObs.disconnect(); }
+    }, { threshold: 0.08 });
+    this._rmObs.observe(wrap);
+    setTimeout(() => rowEls.forEach((r) => { r.style.opacity = '1'; if (!opacityOnly) r.style.transform = 'none'; }), 3000);
+  }
+
+  renderVals() {
+    const cats = ['All', 'TEKNOFEST', 'NASA', 'Lab'];
+    const cur = this.state.filter;
+    const filters = cats.map((c) => ({
+      label: c,
+      onClick: () => this.setState({ filter: c }),
+      bg: c === cur ? '#11C39A' : '#fff',
+      color: c === cur ? '#04241c' : '#6B7488',
+      border: c === cur ? '#11C39A' : '#D8DCE4',
+    }));
+
+    const catColors = { TEKNOFEST:'#F5A524', AYGAZ:'#2E5BFF', NASA:'#7C6CF5', Field:'#11C39A', Lab:'#FF5C6C' };
+    const gallery = this.galleryData
+      .filter((g) => cur === 'All' || g.category === cur)
+      .map((g) => ({
+        slotId: g.slotId,
+        h: g.h,
+        fitLabel: this.tileMode(g.slotId) === 'Natural' ? 'natural' : 'uniform',
+        fitTitle: 'Toggle this image between uniform tile and its own proportions',
+        fitToggle: () => this.toggleTileFit(g.slotId),
+        placeholder: g.category + ' photo',
+        caption: g.caption,
+        date: g.category + ' · ' + g.date,
+        catColor: catColors[g.category] || '#6B7488',
+      }));
+
+    const thesis = (this.props.thesis ?? 'A') === 'B'
+      ? 'Detection, tracking, and deployment that run where the compute is small.'
+      : 'Real-time vision systems — from the model to the edge device.';
+
+    return { filters, gallery, thesisText: thesis, downloadCV: (e) => this.downloadCV(e) };
+  }
+}
+
+</script>
+</body>
+</html>
