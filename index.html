@@ -48,11 +48,11 @@
 
   <!-- HOME / INTRO — staged entrance: who → claim → proof → invitation -->
   <div id="top" class="content hero">
-    <p class="eyebrow rise" style="--d:.05s"><img class="avatar" src="media/profile.jpg" alt="Portrait of Hasan Bakir" loading="eager"> Hey, I&rsquo;m Hasan</p>
+    <p class="eyebrow rise" style="--d:.05s"><img class="avatar" src="media/profile.jpg" alt="Portrait of Hasan Bakir" loading="eager"> Hey, I&rsquo;m Hasan <span class="status"><i></i>Open to work</span></p>
     <h1 class="lead rise" style="--d:.18s">An AI Engineer <span>building reliable, production-ready systems at scale.</span></h1>
     <div class="body">
       <p class="rise" style="--d:.32s">I focus on <strong>computer vision and applied AI</strong> &mdash; designing, training, and deploying deep-learning systems that hold up in real-world conditions.</p>
-      <p class="rise" style="--d:.42s">I&rsquo;m currently an AI engineer at <strong>AYGAZ (Ko&ccedil; Group)</strong>, where I&rsquo;ve spent over a year shipping production vision systems &mdash; from real-time monitoring and inspection to AI-assisted data pipelines.</p>
+      <p class="rise" style="--d:.42s">I most recently spent over a year as an AI engineer at <strong>AYGAZ (Ko&ccedil; Group)</strong>, shipping production vision systems &mdash; from real-time monitoring and inspection to AI-assisted data pipelines.</p>
       <p class="rise" style="--d:.52s">Before that, I built autonomous UAV systems as a two-time TEKNOFEST finalist, published IEEE research, shipped a T&Uuml;B&#304;TAK-funded IoT product, and joined a NASA Space Apps global-nominee team.</p>
       <p class="contact-copy rise" style="--d:.62s">I care about clean architecture, measurable performance, and systems that survive contact with production &mdash; on the edge as well as in the cloud.</p>
       <a class="contact-link rise magnetic" href="#contact" style="--d:.72s">Contact me
@@ -91,9 +91,9 @@
           <span class="work-note">live inference</span>
         </div>
         <figure class="media dark media-compact" data-dual-video>
-          <video data-main src="media/tracking.mp4" autoplay loop muted playsinline></video>
+          <video data-main src="media/tracking.mp4" loop muted playsinline preload="metadata"></video>
           <div class="tactical-inset">
-            <video data-tactical src="media/tactical.mp4" autoplay loop muted playsinline></video>
+            <video data-tactical src="media/tactical.mp4" loop muted playsinline preload="metadata"></video>
             <span class="tactical-label">BEV &middot; tactical</span>
           </div>
         </figure>
@@ -157,10 +157,14 @@
     <p class="route-sub">Industry, competition, and education &mdash; the short version. Full details are in my resume.</p>
     <div class="xp-list">
       <div class="xp">
-        <p class="xp-date">Dec 2024 &ndash; Feb 2026</p>
+        <div class="xp-rail">
+          <p class="xp-date">Dec 2024 &ndash; Feb 2026</p>
+          <img class="xp-logo" src="media/logos/aygaz.svg" alt="AYGAZ logo" loading="lazy">
+          <p class="xp-org-short">AYGAZ</p>
+        </div>
         <div>
-          <h4>AI Software Engineering Intern <em>1+ year &middot; production</em></h4>
-          <p class="org">AYGAZ (Ko&ccedil; Group) &mdash; Istanbul</p>
+          <h4>AI Software Developer <em>1+ year &middot; production</em></h4>
+          <p class="org">AYGAZ (Ko&ccedil; Group) &mdash; Istanbul &middot; Long Term Intern</p>
           <ul>
             <li>Dual-vision truck monitoring &mdash; YOLOv11 + ByteTrack at 30&ndash;45 FPS, ONNX/TensorRT optimized.</li>
             <li>License-plate OCR pipeline at ~100% accuracy on factory vehicles.</li>
@@ -170,35 +174,73 @@
           </ul>
         </div>
       </div>
-      <div class="xp">
-        <p class="xp-date">2025</p>
+      <div class="xp xp--comp">
+        <div class="xp-rail">
+          <p class="xp-date">2025</p>
+          <img class="xp-logo" src="media/logos/nasa.svg" alt="NASA logo" loading="lazy">
+          <p class="xp-org-short">NASA Space Apps</p>
+          <p class="xp-type type-comp"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4zM7 6H4a1 1 0 0 0-1 1c0 2.5 2 4 4 4M17 6h3a1 1 0 0 1 1 1c0 2.5-2 4-4 4"/></svg>Competition</p>
+        </div>
         <div>
           <h4>NASA Space Apps Challenge <em>Global Nominee &middot; Top 10%</em></h4>
-          <p class="org">SHIFT Team &mdash; seismic dashboard</p>
-          <ul><li>Built SHIFT: real-time earthquake monitoring + risk visualization on NASA datasets. Local 2nd place.</li></ul>
+          <p class="org">SHIFT Team &mdash; seismic dashboard &middot; Local 2nd place</p>
+          <ul>
+            <li>Built SHIFT: seismic data analysis and early-warning platform on NASA datasets.</li>
+            <li>Interactive real-time earthquake monitoring dashboard + public risk visualization.</li>
+          </ul>
         </div>
       </div>
       <div class="xp">
-        <p class="xp-date">Oct &ndash; Nov 2024</p>
+        <div class="xp-rail">
+          <p class="xp-date">Oct &ndash; Nov 2024</p>
+          <img class="xp-logo" src="media/logos/aisoft.png" alt="AISOFT logo" loading="lazy">
+          <p class="xp-org-short">AISOFT</p>
+        </div>
         <div>
           <h4>Computer Vision Engineering Intern</h4>
           <p class="org">AISOFT &mdash; Sakarya &middot; T&Uuml;B&#304;TAK-supported stitching project</p>
           <ul><li>Image stitching (ORB/SIFT, homography) and Pandas/Matplotlib data pipelines.</li></ul>
         </div>
       </div>
-      <div class="xp">
-        <p class="xp-date">2023 &ndash; 2024</p>
+      <div class="xp xp--comp">
+        <div class="xp-rail">
+          <p class="xp-date">2023 &ndash; 2024</p>
+          <img class="xp-logo" src="media/logos/teknofest.png" alt="TEKNOFEST logo" loading="lazy">
+          <p class="xp-org-short">TEKNOFEST</p>
+          <p class="xp-type type-comp"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4zM7 6H4a1 1 0 0 0-1 1c0 2.5 2 4 4 4M17 6h3a1 1 0 0 1 1 1c0 2.5-2 4-4 4"/></svg>Competition</p>
+        </div>
         <div>
-          <h4>TEKNOFEST &mdash; Software Team Member <em>2&times; Finalist</em></h4>
-          <p class="org">Poyraz Havac&#305;l&#305;k (Int&rsquo;l UAV) &middot; &#304;LGERU Combat UAV</p>
-          <ul><li>Solar-farm defect detection + air-to-air target detection, both real-time on Raspberry Pi.</li></ul>
+          <h4>Poyraz Havac&#305;l&#305;k &mdash; International UAV <em>Finalist</em></h4>
+          <p class="org">Dual-UAV autonomous solar-farm inspection</p>
+          <ul><li>YOLOv8/v5 defect detection (cracks, soiling) with real-time processing on Raspberry Pi, plus panel-health analytics reporting.</li></ul>
         </div>
       </div>
-      <div class="xp">
-        <p class="xp-date">2022 &ndash; 2026</p>
+      <div class="xp xp--comp">
+        <div class="xp-rail">
+          <p class="xp-date">2023 &ndash; 2024</p>
+          <img class="xp-logo" src="media/logos/teknofest.png" alt="TEKNOFEST logo" loading="lazy">
+          <p class="xp-org-short">TEKNOFEST</p>
+          <p class="xp-type type-comp"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4zM7 6H4a1 1 0 0 0-1 1c0 2.5 2 4 4 4M17 6h3a1 1 0 0 1 1 1c0 2.5-2 4-4 4"/></svg>Competition</p>
+        </div>
+        <div>
+          <h4>&#304;LGERU &mdash; Combat UAV <em>Software Team</em></h4>
+          <p class="org">Autonomous air-to-air target detection</p>
+          <ul>
+            <li>Computer vision for autonomous target detection; managed dataset annotation in Roboflow.</li>
+            <li>Deployed real-time YOLO inference on embedded Raspberry Pi hardware.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="xp xp--edu">
+        <div class="xp-rail">
+          <p class="xp-date">2022 &ndash; 2026</p>
+          <img class="xp-logo" src="media/logos/sau.svg" alt="Sakarya University logo" loading="lazy">
+          <p class="xp-org-short">Sakarya University</p>
+          <p class="xp-type type-edu"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2 9l10 5 10-5-10-5zM6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5M22 9v5"/></svg>Education</p>
+        </div>
         <div>
           <h4>B.Sc. Computer Engineering</h4>
-          <p class="org">Sakarya University &mdash; GPA 3.03 / 4.00</p>
+          <p class="org">Sakarya University &mdash; GPA 3.02 / 4.00</p>
         </div>
       </div>
     </div>

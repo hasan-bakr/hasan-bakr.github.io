@@ -79,6 +79,21 @@
     els.forEach(el => el.classList.add('in'));
   }
 
+  // Lazy video: fetch nothing upfront (preload=metadata), play only
+  // when visible, pause offscreen — keeps load lean and saves battery
+  const autoVids = Array.from(document.querySelectorAll('.media video'));
+  if ('IntersectionObserver' in window) {
+    const vobs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.play().catch(() => {}); }
+        else { e.target.pause(); }
+      });
+    }, { threshold: 0.2 });
+    autoVids.forEach(v => vobs.observe(v));
+  } else {
+    autoVids.forEach(v => v.play().catch(() => {}));
+  }
+
   // Dual video sync
   const dual = document.querySelector('[data-dual-video]');
   if (dual) {
@@ -94,7 +109,6 @@
       main.addEventListener('timeupdate', sync);
       main.addEventListener('play', () => tac.play().catch(() => {}));
       main.addEventListener('pause', () => tac.pause());
-      [main, tac].forEach(v => v.play().catch(() => {}));
     }
   }
 
